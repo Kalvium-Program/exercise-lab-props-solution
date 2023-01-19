@@ -1,9 +1,14 @@
-import './App.css';
-import Data from "./components/Data"
-import Image from "./components/Image"
-function App() {
-  return (
-    <div>
+import React, { Component } from 'react'
+import ImageClass from './components/ImageClass';
+import Data from "./components/Data";
+
+
+// you can even create a component with a class.
+
+export default class AppClass extends Component {
+  render() {
+    return (
+      <div>
     <header>
       <img src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png" alt=""></img>
       <h3>Kalvium Education</h3>
@@ -18,9 +23,8 @@ function App() {
         purpose (injected humour and the like).
       </p>
     </div>
-    <Image data={Data}></Image>
+    <ImageClass Data={Data}></ImageClass>
   </div>
-  );
+    )
+  }
 }
-
-export default App;
